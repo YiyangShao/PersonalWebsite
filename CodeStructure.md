@@ -13,4 +13,5 @@
   - Navigation.js: Handles tab navigation between different pages using a bottom tab navigator. Custom headers are displayed for each page.
 
 ## Key Files
-- CodeStructure.md: Documentation of project structure
+- CodeStructure.md: Documentation of project structure.
+- CodingStyle.md: Describes the coding style and best practices to follow when maintaining and extending the codebase.
