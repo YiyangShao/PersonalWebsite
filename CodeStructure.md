@@ -15,3 +15,4 @@
 ## Key Files
 - CodeStructure.md: Documentation of project structure.
 - CodingStyle.md: Describes the coding style and best practices to follow when maintaining and extending the codebase.
+- ReadMe.md: A fun and informative overview of the project, its features, and usage instructions.
