@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 18,
+    marginBottom: 20,
   },
   button: {
     backgroundColor: '#007BFF',
@@ -26,6 +27,18 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#FFFFFF',
     fontSize: 16,
+  },
+  // Social media section
+  socialContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  socialLinks: {
+    flexDirection: 'row',
+    marginTop: 10,
+  },
+  socialIcon: {
+    marginHorizontal: 10,
   },
 });
 

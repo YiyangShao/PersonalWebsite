@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './pages/Home';
 import Games from './pages/Games';
-import Products from './pages/Products';  // Import the Products page
+import Products from './pages/Products';
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -32,11 +32,19 @@ const Navigation = () => {
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',
+          headerTitleAlign: 'center',  // Center align header title
+          headerStyle: {
+            backgroundColor: '#007BFF',  // Custom header background color
+          },
+          headerTintColor: '#fff',  // Header text color
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
         })}
       >
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Games" component={Games} />
-        <Tab.Screen name="Products" component={Products} />
+        <Tab.Screen name="Home" component={Home} options={{ title: 'Welcome Home' }} />
+        <Tab.Screen name="Games" component={Games} options={{ title: 'Play Games' }} />
+        <Tab.Screen name="Products" component={Products} options={{ title: 'Browse Products' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );
