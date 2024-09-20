@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import styles from '../styles';  // Import the global stylesheet
 
 /**
  * Home Component
@@ -17,33 +18,5 @@ const Home = ({ navigation }) => {
     </View>
   );
 };
-
-// Styles for the Home component
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  subtitle: {
-    fontSize: 18,
-    marginBottom: 20,
-  },
-  button: {
-    backgroundColor: '#007BFF',
-    padding: 10,
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-  },
-});
 
 export default Home;

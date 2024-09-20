@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import styles from '../styles';  // Import the global stylesheet
 
 /**
  * Products Component
@@ -13,23 +14,5 @@ const Products = () => {
     </View>
   );
 };
-
-// Styles for the Products component
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  subtitle: {
-    fontSize: 18,
-  },
-});
 
 export default Products;

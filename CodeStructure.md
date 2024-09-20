@@ -8,6 +8,7 @@
     - Games.js: Placeholder for the Games page, to display available games.
     - Products.js: Placeholder for the Products page, to display available products.
   - utils/: Utility functions and helpers
+  - styles.js: Contains global styles used across the app to maintain consistency.
   - Navigation.js: Handles tab navigation between different pages using a bottom tab navigator.
 
 ## Key Files
