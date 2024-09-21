@@ -1,16 +1,20 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import styles from '../styles';  // Import the global stylesheet
+import styles from '../styles';
+import Game from '../components/2048/src/components/Game';  // Import the 2048 game
 
 /**
  * Games Component
- * This is a placeholder for the Games page. It will display available games in the future.
+ * This page contains the 2048 game and other game-related content.
  */
 const Games = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Games Page</Text>
-      <Text style={styles.subtitle}>Available games will be listed here soon.</Text>
+      <Text style={styles.subtitle}>Play 2048 Below:</Text>
+      
+      {/* Render 2048 Game */}
+      <Game />
     </View>
   );
 };
