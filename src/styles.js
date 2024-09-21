@@ -77,6 +77,16 @@ const styles = StyleSheet.create({
   socialIcon: {
     marginHorizontal: 10,
   },
+  galleryContainer: {
+    alignItems: 'center',
+    padding: 16,
+  },
+  galleryImage: {
+    width: 300,
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 16,
+  },
 });
 
 export default styles;
