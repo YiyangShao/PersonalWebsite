@@ -12,9 +12,17 @@ const GameGallery = ({ onGameSelect }) => {
       <Text style={styles.title}>Game Gallery</Text>
 
       {/* Preview for 2048 Game */}
-      <TouchableOpacity onPress={onGameSelect}>
+      <TouchableOpacity onPress={() => onGameSelect('2048')}>
         <Image 
           source={{ uri: 'https://via.placeholder.com/300x200.png?text=2048+Preview' }}  // Placeholder for 2048 game preview
+          style={styles.galleryImage}
+        />
+      </TouchableOpacity>
+
+      {/* Preview for Flappy Bird Game */}
+      <TouchableOpacity onPress={() => onGameSelect('FlappyBird')}>
+        <Image 
+          source={{ uri: 'https://via.placeholder.com/300x200.png?text=Flappy+Bird+Preview' }}  // Placeholder for Flappy Bird game preview
           style={styles.galleryImage}
         />
       </TouchableOpacity>

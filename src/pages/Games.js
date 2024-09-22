@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import GameGallery from '../components/GameGallery';
-import Game from '../components/2048/src/components/Game';
+import Game2048 from '../components/2048/src/components/Game';
+import FlappyBird from '../components/FlappyBird/FlappyBird';  // Import Flappy Bird game
 import styles from '../styles';
 
 /**
@@ -11,8 +12,8 @@ import styles from '../styles';
 const Games = () => {
   const [selectedGame, setSelectedGame] = useState(null);
 
-  const handleGameSelect = () => {
-    setSelectedGame('2048');
+  const handleGameSelect = (game) => {
+    setSelectedGame(game);
   };
 
   const handleBackToGallery = () => {
@@ -23,11 +24,17 @@ const Games = () => {
     <View style={styles.container}>
       {selectedGame === '2048' ? (
         <>
-          {/* Back to Gallery button at the top-left */}
           <TouchableOpacity style={styles.backButton} onPress={handleBackToGallery}>
             <Text style={styles.backButtonText}>Back</Text>
           </TouchableOpacity>
-          <Game />  {/* Render the 2048 game */}
+          <Game2048 />
+        </>
+      ) : selectedGame === 'FlappyBird' ? (
+        <>
+          <TouchableOpacity style={styles.backButton} onPress={handleBackToGallery}>
+            <Text style={styles.backButtonText}>Back</Text>
+          </TouchableOpacity>
+          <FlappyBird />
         </>
       ) : (
         <GameGallery onGameSelect={handleGameSelect} />
