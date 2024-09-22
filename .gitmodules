@@ -1,3 +1,6 @@
 [submodule "src/components/2048"]
 	path = src/components/2048
 	url = https://github.com/YiyangShao/2048-game.git
+[submodule "src/components/FlappyBird"]
+	path = src/components/FlappyBird
+	url = https://github.com/YiyangShao/FlappyBirdGame.git
