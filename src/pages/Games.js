@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import GameGallery from '../components/GameGallery';
 import Game2048 from '../components/2048/src/components/Game';
-import FlappyBird from '../components/FlappyBird/FlappyBird';  // Import Flappy Bird game
+import FlappyBird from '../components/FlappyBird/App';  // Import Flappy Bird game
 import styles from '../styles';
 
 /**

@@ -6,7 +6,7 @@
     - Footer.js: A footer component that displays contact information and copyright.
     - GameGallery.js: Displays a gallery of games with clickable previews to load the selected game.
   - pages/: Individual webpage components
-    - Home.js: Displays the homepage of the personal website with an introduction, features, call-to-action buttons, social media links, and a footer.
+    - Home.js: Displays the homepage of the personal website with an introduction, featu res, call-to-action buttons, social media links, and a footer.
     - Games.js: Displays a game gallery with the 2048 game. Includes a button to return to the gallery.
     - Products.js: Placeholder for the Products page, to display available products.
     - AboutMe.js: An About Me page introducing the developer behind the website.
