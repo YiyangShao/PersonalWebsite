@@ -87,6 +87,32 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 16,
   },
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 16,
+    },
+    productImage: {
+      width: 300,
+      height: 200,
+      borderRadius: 10,
+      marginBottom: 16,
+    },
+    backButton: {
+      position: 'absolute',
+      top: 10,
+      left: 10,
+      backgroundColor: '#007BFF',
+      padding: 10,
+      borderRadius: 5,
+      zIndex: 10,
+    },
+    backButtonText: {
+      color: '#FFFFFF',
+      fontSize: 16,
+    },
+  
 });
 
 export default styles;

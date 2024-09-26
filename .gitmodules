@@ -4,3 +4,6 @@
 [submodule "src/components/FlappyBird"]
 	path = src/components/FlappyBird
 	url = https://github.com/YiyangShao/FlappyBirdGame.git
+[submodule "src/components/TurntableHelper"]
+	path = src/components/TurntableHelper
+	url = https://github.com/YiyangShao/TurntableDecisionHelper.git
