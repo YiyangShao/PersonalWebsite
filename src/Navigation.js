@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { TouchableOpacity, Text } from 'react-native';
 import Home from './pages/Home';
 import Games from './pages/Games';
 import Products from './pages/Products';
-import AboutMe from './pages/AboutMe';  // Import AboutMe page
+import AboutMe from './pages/AboutMe';
 import { Ionicons } from '@expo/vector-icons';
+import { useAuth } from '@workos-inc/authkit-react';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,6 +16,16 @@ const Tab = createBottomTabNavigator();
  * Handles tab navigation between pages in the website.
  */
 const Navigation = () => {
+  const { user, signIn, signOut } = useAuth();
+
+  const handleAuthAction = () => {
+    if (user) {
+      signOut();  // Log out if the user is logged in
+    } else {
+      signIn();   // Log in if no user is logged in
+    }
+  };
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -43,9 +55,22 @@ const Navigation = () => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
+          headerRight: () => (
+            <TouchableOpacity onPress={handleAuthAction} style={{ marginRight: 20 }}>
+              <Text style={{ color: '#fff', fontSize: 16 }}>
+                {user ? 'Logout' : 'Login'}
+              </Text>
+            </TouchableOpacity>
+          ),
         })}
       >
-        <Tab.Screen name="Home" component={Home} options={{ title: 'Welcome Home' }} />
+        <Tab.Screen 
+          name="Home" 
+          component={Home} 
+          options={{ 
+            title: user ? `Welcome Home, ${user.firstName}` : 'Welcome Home'  // Dynamic title
+          }} 
+        />
         <Tab.Screen name="Games" component={Games} options={{ title: 'Play Games' }} />
         <Tab.Screen name="Products" component={Products} options={{ title: 'Browse Products' }} />
         <Tab.Screen name="About Me" component={AboutMe} options={{ title: 'About Me' }} />
