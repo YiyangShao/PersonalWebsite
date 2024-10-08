@@ -10,7 +10,7 @@ export default function App() {
   return (
     <AuthKitProvider
       clientId="client_01J9F7DEMQMV5N1EPSTCK3BWM1"
-      redirectUri="http://localhost:8082/"
+      redirectUri={window.location.origin}  // Dynamic current URL
       onRedirectCallback={({ state }) => {
         if (state?.returnTo) {
           navigate(state.returnTo);
